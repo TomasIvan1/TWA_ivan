@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "55f908bd-015f-4bc0-a8e7-79d1721c32a1",
+		"name": "TWA_ivan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39479373"
+	},
+	"item": [
+		{
+			"name": "/offers/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/offers/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"offers",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/offers/create ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tomáš\",\r\n    \"surname\": \"Černák\", \r\n    \"email\": \"tomas.cernak@spse-po.sk\", \r\n    \"phone\": \"+421900000003\",\r\n    \"offers\": \"Programovanie v pythone\",\r\n    \"wants\": \"Hranie šachu\",\r\n    \"location\": \"Košice\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/offers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"offers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/offers/read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/offers/read?id=74fd28913c4f44d419bad2f45a27ad53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"offers",
+						"read"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "74fd28913c4f44d419bad2f45a27ad53"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/offers/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/offers/delete?id=e6c922bcb5e7620423835f4eeba095b3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"offers",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "e6c922bcb5e7620423835f4eeba095b3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/offers/update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"offers\": \"Hra na harfu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/offers/update?id=74fd28913c4f44d419bad2f45a27ad53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"offers",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "74fd28913c4f44d419bad2f45a27ad53"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/offers/search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/offers/search?offers=&wants=Konverzácia v angličtine&location=Košice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"offers",
+						"search"
+					],
+					"query": [
+						{
+							"key": "offers",
+							"value": ""
+						},
+						{
+							"key": "wants",
+							"value": "Konverzácia v angličtine"
+						},
+						{
+							"key": "location",
+							"value": "Košice"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
